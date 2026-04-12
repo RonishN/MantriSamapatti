@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nepal Cabinet 2026 — Asset Disclosures</title>
+  <meta name="description"
+    content="Explore the official asset disclosures of Nepal's new cabinet ministers as declared in April 2026." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@700;900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+  <!-- ── PARTICLES BACKGROUND ── -->
+  <div id="particles" aria-hidden="true"></div>
+
+  <!-- ── HEADER ── -->
+  <header class="site-header">
+    <div class="header-inner container">
+      <div class="header-flag">
+        <div class="flag-strip red"></div>
+        <div class="flag-strip blue"></div>
+        <div class="flag-strip red"></div>
+      </div>
+      <div class="header-text">
+        <h1 class="site-title">Nepal Cabinet 2026</h1>
+        <p class="site-subtitle">Official Asset & Wealth Disclosures — April 2026</p>
+      </div>
+      <div class="header-badge">
+        <span class="badge-dot"></span>
+        <span>Live Data</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- ── CONTROLS ── -->
+  <section class="controls-section container" aria-label="Search and filter controls">
+    <div class="controls-row">
+      <div class="search-wrapper">
+        <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="8" />
+          <line x1="21" y1="21" x2="16.65" y2="16.65" />
+        </svg>
+        <input type="search" id="searchInput" class="search-input" placeholder="Search minister or portfolio…" />
+        <button class="search-clear" id="searchClear" hidden>✕</button>
+      </div>
+      <div class="filter-chips" role="group">
+        <button class="chip active" data-filter="all">All</button>
+        <button class="chip" data-filter="detailed"><span class="chip-dot green"></span>Full Details</button>
+        <button class="chip" data-filter="pending"><span class="chip-dot orange"></span>Disclosed</button>
+      </div>
+      <div class="view-toggle" role="group">
+        <button class="view-btn active" id="viewGrid" title="Grid View">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <rect x="3" y="3" width="7" height="7" rx="1" />
+            <rect x="14" y="3" width="7" height="7" rx="1" />
+            <rect x="3" y="14" width="7" height="7" rx="1" />
+            <rect x="14" y="14" width="7" height="7" rx="1" />
+          </svg>
+        </button>
+        <button class="view-btn" id="viewList" title="List View">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <rect x="3" y="4" width="18" height="3" rx="1" />
+            <rect x="3" y="10.5" width="18" height="3" rx="1" />
+            <rect x="3" y="17" width="18" height="3" rx="1" />
+          </svg>
+        </button>
+        <button class="view-btn" id="viewDashboard" title="Analytics Dashboard">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 20V10M18 20V4M6 20v-4" />
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div class="results-count" id="resultsCount">Loading...</div>
+  </section>
+
+  <main class="container" id="mainContent">
+    <!-- ── MINISTER GRID ── -->
+    <div class="minister-grid" id="ministerGrid" role="list"></div>
+
+    <!-- ── EMPTY STATE ── -->
+    <div class="empty-state" id="emptyState" hidden>
+      <div class="empty-icon">🔍</div>
+      <h3>No results found</h3>
+      <p>Try adjusting your search or filter.</p>
+    </div>
+
+    <!-- ── DASHBOARD VIEW ── -->
+    <div class="dashboard-container" id="dashboardView" hidden>
+      <div class="dash-hero">
+        <div class="dash-hero-card">
+          <div class="dash-hero-icon" style="background: rgba(245,158,11,0.15); color: #f59e0b;">🥇</div>
+          <div class="dash-hero-content">
+            <h4>Total Declared Gold</h4>
+            <div class="dash-hero-value" id="dashTotalGold">0 Tolas</div>
+          </div>
+        </div>
+        <div class="dash-hero-card">
+          <div class="dash-hero-icon" style="background: rgba(34,197,94,0.15); color: #22c55e;">💵</div>
+          <div class="dash-hero-content">
+            <h4>Total Declared Cash</h4>
+            <div class="dash-hero-value" id="dashTotalCash">NPR 0</div>
+          </div>
+        </div>
+        <div class="dash-hero-card">
+          <div class="dash-hero-icon" style="background: rgba(59,130,246,0.15); color: #3b82f6;">🏡</div>
+          <div class="dash-hero-content">
+            <h4>Est. Total Value</h4>
+            <div class="dash-hero-value" id="dashTotalWealth">NPR 0</div>
+          </div>
+        </div>
+      </div>
+      <div class="dash-grid">
+        <div class="dash-panel ranking-panel">
+          <div class="panel-header">
+            <h3>🏆 Wealthiest Ministers (Top 10)</h3>
+            <p>Based on estimated monetary value of disclosed cash, properties, and gold.</p>
+          </div>
+          <div class="lb-list" id="topRankList"></div>
+        </div>
+        <div class="dash-panel chart-panel">
+          <div class="panel-header">
+            <h3>🥧 Wealth Distribution (Pie)</h3>
+            <p>Estimated split among top ministers.</p>
+          </div>
+          <div class="chart-wrapper">
+            <canvas id="wealthPieChart"></canvas>
+          </div>
+        </div>
+        <div class="dash-panel chart-panel" style="grid-column: 1 / -1;">
+          <div class="panel-header">
+            <h3>📊 Wealth Distribution (Bar)</h3>
+            <p>Estimated net worth comparison.</p>
+          </div>
+          <div class="chart-wrapper" style="height: 480px;">
+            <canvas id="wealthBarChart"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- ── MODAL ── -->
+  <div class="modal-overlay" id="modalOverlay" hidden>
+    <div class="modal-card" id="modalCard">
+      <button class="modal-close" id="modalClose">✕</button>
+      <div class="modal-header">
+        <div class="modal-avatar" id="modalAvatar"></div>
+        <div class="modal-header-text">
+          <h2 class="modal-name" id="modalName"></h2>
+          <p class="modal-role" id="modalRole"></p>
+          <span class="modal-status-badge" id="modalStatusBadge"></span>
+        </div>
+      </div>
+      <div class="modal-body" id="modalBody"></div>
+      <div class="modal-footer">
+        <p class="modal-disclaimer">📋 Source: Official Nepal Government Disclosure</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── FOOTER ── -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>🇳🇵 Nepal Cabinet Asset Transparency Dashboard — April 2026</p>
+      <p class="footer-note">Data sourced from official government disclosures. All figures are estimates based on
+        available text disclosures.</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
