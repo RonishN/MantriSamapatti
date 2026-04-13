@@ -77,6 +77,11 @@
           </svg>
         </button>
       </div>
+      <div class="theme-toggle" role="group" aria-label="Theme switcher">
+        <button class="theme-btn active" data-theme="dark" title="Dark Theme">🌙</button>
+        <button class="theme-btn" data-theme="light" title="Light Theme">☀️</button>
+        <button class="theme-btn" data-theme="makai" title="Makai Theme">🌽</button>
+      </div>
     </div>
     <div class="results-count" id="resultsCount">Loading...</div>
   </section>
@@ -169,9 +174,22 @@
   <!-- ── FOOTER ── -->
   <footer class="site-footer">
     <div class="container footer-inner">
-      <p>🇳🇵 Nepal Cabinet Asset Transparency Dashboard — April 2026</p>
-      <p class="footer-note">Data sourced from official government disclosures. All figures are estimates based on
-        available text disclosures.</p>
+      <div class="footer-content">
+        <p>🇳🇵 Nepal Cabinet Asset Transparency Dashboard — April 2026</p>
+        <p class="footer-note">Data sourced from official government disclosures. All figures are estimates based on available text disclosures.</p>
+      </div>
+      <div class="footer-credits">
+        <p class="creator-name">Built with ✨ by <a href="https://ronishn.github.io/Ronishportfolio/" target="_blank" class="credit-link">Ronish Neupane</a></p>
+        <p class="makai-badge">Founder of <strong>Makai</strong></p>
+        <div class="footer-socials">
+          <a href="https://www.linkedin.com/in/ronish-neupane/" target="_blank" class="social-link" title="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+          </a>
+          <a href="https://ronishn.github.io/Ronishportfolio/" target="_blank" class="social-link" title="Portfolio">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-12h2v6h-2zm0 8h2v2h-2z"/></svg>
+          </a>
+        </div>
+      </div>
     </div>
   </footer>
 

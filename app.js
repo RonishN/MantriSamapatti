@@ -525,6 +525,26 @@ viewGridBtn.addEventListener("click", () => switchView("grid"));
 viewListBtn.addEventListener("click", () => switchView("list"));
 viewDashBtn.addEventListener("click", () => switchView("dashboard"));
 
+/* Theme Togglers */
+const themeBtns = document.querySelectorAll(".theme-btn");
+function initTheme() {
+  const savedTheme = localStorage.getItem("nepal-cabinet-theme") || "dark";
+  document.documentElement.setAttribute('data-theme', savedTheme);
+  themeBtns.forEach(btn => {
+    btn.classList.toggle("active", btn.dataset.theme === savedTheme);
+  });
+}
+themeBtns.forEach(btn => {
+  btn.addEventListener("click", () => {
+    const theme = btn.dataset.theme;
+    document.documentElement.setAttribute('data-theme', theme);
+    localStorage.setItem("nepal-cabinet-theme", theme);
+    themeBtns.forEach(b => b.classList.remove("active"));
+    btn.classList.add("active");
+  });
+});
+initTheme();
+
 /* Particles */
 function initParticles() {
   const container = document.getElementById("particles");
