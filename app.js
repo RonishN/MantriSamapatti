@@ -436,7 +436,7 @@ function renderDashboard() {
     const pieLabels = sorted.slice(0, 6).map(m => m.shortName);
     const pieData = sorted.slice(0, 6).map(m => m.totalNprValue);
     const pieColors = sorted.slice(0, 6).map(m => m.color[0]);
-    
+
     if (sorted.length > 6) {
       pieLabels.push("Others");
       pieData.push(sorted.slice(6).reduce((s, m) => s + m.totalNprValue, 0));
