@@ -5,37 +5,35 @@
 const MINISTERS = [
   {
     id: 1,
-    name: "Balendra (Balen) Shah",
+    name: "Balendra Shah",
     shortName: "Balen Shah",
-    role: "Prime Minister, Defence, and Industry",
+    role: "PM & Defence",
     emoji: "🏛️",
     color: ["#dc2626", "#991b1b"],
     status: "detailed",
-    pillTags: ["💰 NPR 1.46Cr", "🏡 Land", "💍 Gold"],
-    numericAssets: { cash: 14600000, goldTola: 190, propertyValueApprox: 70000000, sharesVal: 0 },
+    pillTags: ["💰 NPR 1.46Cr", "🏡 Land", "💍 190 Tolas Gold"],
+    numericAssets: { cash: 14600000, goldTola: 190, propertyValueApprox: 0, sharesVal: 0 },
     assets: [
       {
         type: "section",
-        title: "Personal Income & Bank",
+        title: "Bank & Income",
         items: [
-          { icon: "🏦", label: "Bank Balance", value: "NPR 1.46 crore", highlight: true },
-          { icon: "📱", label: "Income Sources", value: "Facebook, YouTube, TikTok, Spotify, Instagram" },
+          { icon: "🏦", label: "Bank/Cash", value: "NPR 14.6 million", highlight: true },
+          { icon: "📱", label: "Income", value: "Social media income" },
         ]
       },
       {
         type: "section",
-        title: "Property & Land (Approx combined 10 Bigha)",
+        title: "Properties",
         items: [
-          { icon: "🌾", label: "Land — Mahottari", value: "9 bigha (father's name)" },
-          { icon: "🏙️", label: "Land — Kathmandu", value: "5 aana (mother's name)" },
-          { icon: "🏘️", label: "Land — Dhanusha", value: "1.2 bigha (mother's name)" },
+          { icon: "🏡", label: "Land", value: "Family land in Kathmandu, Dhanusha, Mahottari" },
         ]
       },
       {
         type: "section",
-        title: "Spouse Assets (Sabina Kafle)",
+        title: "Spouse & Inherited",
         items: [
-          { icon: "💍", label: "Jewelry", value: "190 tolas of gold / silver / diamond" },
+          { icon: "💍", label: "Gold", value: "190 tola (spouse, inherited)", highlight: true },
         ]
       }
     ]
@@ -44,126 +42,63 @@ const MINISTERS = [
     id: 2,
     name: "Dr. Swarnim Wagle",
     shortName: "Swarnim Wagle",
-    role: "Finance Minister",
+    role: "Finance",
     emoji: "💹",
     color: ["#1e40af", "#1e3a8a"],
     status: "detailed",
-    pillTags: ["🏠 NPR 12.75Cr", "🏦 NPR 1.9Cr", "📈 100K Shares"],
-    numericAssets: { cash: 19000000, goldTola: 0, propertyValueApprox: 127500000, sharesVal: 20000000 },
+    pillTags: ["🏠 NPR 12.75Cr", "🏦 NPR 1.9Cr", "🥇 45 Tolas Gold"],
+    numericAssets: { cash: 19000000, goldTola: 45, propertyValueApprox: 127500000, sharesVal: 0 },
     assets: [
       {
         type: "section",
-        title: "Properties (Total ~NPR 12.75 crore)",
+        title: "Properties",
         items: [
-          { icon: "🏢", label: "Sanepa Apartment", value: "NPR 2 crore", highlight: true },
-          { icon: "🏡", label: "Bhaisepati House", value: "NPR 5 crore", highlight: true },
-          { icon: "🏙️", label: "Dhulikhel Apartment", value: "NPR 3.75 crore", highlight: true },
-          { icon: "🌄", label: "Tanahun House", value: "NPR 2 crore", highlight: true },
+          { icon: "🏢", label: "Apartments/house", value: "NPR 12.75 crore total", highlight: true },
         ]
       },
       {
         type: "section",
         title: "Financial Assets",
         items: [
-          { icon: "🏦", label: "Bank Deposits", value: "NPR 1.9 crore", highlight: true },
-          { icon: "📈", label: "Shares", value: "Nearly 100,000 shares across companies" },
+          { icon: "🏦", label: "Bank/Cash", value: "NPR 1.9 crore" },
+          { icon: "📈", label: "Shares", value: "Hydropower/bank shares" },
+          { icon: "🥇", label: "Gold", value: "45 tola", highlight: true },
+        ]
+      },
+      {
+        type: "section",
+        title: "Other & Liabilities",
+        items: [
+          { icon: "🚗", label: "Vehicle", value: "NPR 9.4 million" },
+          { icon: "💳", label: "Loans", value: "NPR 3.55 crore" },
         ]
       }
     ]
   },
   {
     id: 3,
-    name: "Sudan (Sudhan) Gurung",
+    name: "Sudan Gurung",
     shortName: "Sudan Gurung",
-    role: "Home Minister",
+    role: "Home Affairs",
     emoji: "🛡️",
     color: ["#7c3aed", "#6d28d9"],
     status: "detailed",
-    pillTags: ["🌾 19 Ropanis", "🥇 89 Tolas Gold", "🥈 6kg Silver"],
-    numericAssets: { cash: 0, goldTola: 89, propertyValueApprox: 28500000, sharesVal: 0 },
-    assets: [
-      {
-        type: "section",
-        title: "Declared Assets",
-        items: [
-          { icon: "🌾", label: "Land", value: "19 ropanis", highlight: false },
-          { icon: "🥇", label: "Gold", value: "89 tolas", highlight: true },
-        ]
-      }
-    ]
-  },
-  {
-    id: 4,
-    name: "Shishir Khanal",
-    shortName: "Shishir Khanal",
-    role: "Foreign Minister",
-    emoji: "🌐",
-    color: ["#0891b2", "#0e7490"],
-    status: "pending",
-    pillTags: ["📋 Disclosed Apr 12"],
-    numericAssets: { cash: 0, goldTola: 0, propertyValueApprox: 0, sharesVal: 0 },
-    assets: []
-  },
-  {
-    id: 5,
-    name: "Sunil Lamsal",
-    shortName: "Sunil Lamsal",
-    role: "Physical Infrastructure, Transport & Urban Development",
-    emoji: "🏗️",
-    color: ["#d97706", "#b45309"],
-    status: "detailed",
-    pillTags: ["💵 NPR 9M Cash", "🥇 30 Tolas Gold"],
-    numericAssets: { cash: 9000000, goldTola: 30, propertyValueApprox: 15000000, sharesVal: 0 },
+    pillTags: ["📈 NPR 4.31Cr", "🥇 89 Tolas Gold", "🌾 Land"],
+    numericAssets: { cash: 0, goldTola: 89, propertyValueApprox: 0, sharesVal: 43100000 },
     assets: [
       {
         type: "section",
         title: "Financial Assets",
         items: [
-          { icon: "💵", label: "Cash Holdings", value: "NPR 9 million", highlight: true },
-          { icon: "🥇", label: "Gold", value: "30 tolas" },
+          { icon: "📈", label: "Stocks", value: "NPR 4.31 crore (various companies)", highlight: true },
+          { icon: "🥇", label: "Gold", value: "89 tola", highlight: true },
         ]
-      }
-    ]
-  },
-  {
-    id: 6,
-    name: "Biraj Bhakta Shrestha",
-    shortName: "Biraj Shrestha",
-    role: "Energy, Water Resources & Irrigation",
-    emoji: "⚡",
-    color: ["#16a34a", "#15803d"],
-    status: "detailed",
-    pillTags: ["🏦 NPR 58.6L", "🥇 15 Tolas Gold"],
-    numericAssets: { cash: 5864636, goldTola: 15, propertyValueApprox: 0, sharesVal: 145420 },
-    assets: [
+      },
       {
         type: "section",
-        title: "Financial Assets",
+        title: "Properties",
         items: [
-          { icon: "🏦", label: "Bank Balance", value: "NPR 58,64,636", highlight: true },
-          { icon: "📈", label: "Shares", value: "NPR 1,45,420 worth" },
-          { icon: "🥇", label: "Gold", value: "15 tolas" },
-        ]
-      }
-    ]
-  },
-  {
-    id: 8,
-    name: "Sobita Gautam",
-    shortName: "Sobita Gautam",
-    role: "Law, Justice & Parliamentary Affairs",
-    emoji: "⚖️",
-    color: ["#9333ea", "#7e22ce"],
-    status: "detailed",
-    pillTags: ["🏦 NPR 1.05M", "💎 Gold & Diamonds"],
-    numericAssets: { cash: 1050000, goldTola: 25, propertyValueApprox: 0, sharesVal: 0 },
-    assets: [
-      {
-        type: "section",
-        title: "Financial Assets",
-        items: [
-          { icon: "🏦", label: "Bank Deposits", value: "NPR 1.05 million", highlight: true },
-          { icon: "💎", label: "Jewelry", value: "Gold & diamond holdings declared" },
+          { icon: "🏡", label: "Land", value: "Dhankuta, Chitwan, Gorkha" },
         ]
       }
     ]
@@ -172,61 +107,299 @@ const MINISTERS = [
     id: 7,
     name: "Sasmit Pokharel",
     shortName: "Sasmit Pokharel",
-    role: "Education, Science & Technology, Youth & Sports",
+    role: "Education",
     emoji: "📚",
     color: ["#db2777", "#be185d"],
     status: "detailed",
-    pillTags: ["🏡 7 Properties", "🥇 25 Tolas Gold", "🚗 EV & Car"],
-    numericAssets: { cash: 0, goldTola: 25, propertyValueApprox: 220650000, sharesVal: 17700000 },
+    pillTags: ["🏡 NPR 20.5Cr", "🥇 25 Tolas Gold", "💵 NPR 4.5L"],
+    numericAssets: { cash: 450000, goldTola: 25, propertyValueApprox: 205000000, sharesVal: 3000000 },
     assets: [
       {
         type: "section",
-        title: "Properties & Land",
+        title: "Properties",
         items: [
-          { icon: "🏡", label: "Properties", value: "7 properties declared", highlight: true }
+          { icon: "🏡", label: "Properties", value: "NPR 20.5 crore (Kathmandu/Morang)", highlight: true }
         ]
       },
       {
         type: "section",
         title: "Financial Assets",
         items: [
-          { icon: "📈", label: "Shares", value: "≈ NPR 1.77 crore", highlight: true },
-          { icon: "🥇", label: "Gold", value: "25 tolas" },
-          { icon: "🥈", label: "Silver", value: "100 tolas" },
+          { icon: "💵", label: "Bank/Cash", value: "NPR 450,000" },
+          { icon: "📈", label: "Shares", value: "NPR 3 million" },
+          { icon: "🥇", label: "Gold", value: "25 tola", highlight: true },
         ]
       },
       {
         type: "section",
-        title: "Vehicles & Liabilities",
+        title: "Liabilities",
         items: [
-          { icon: "🚗", label: "Vehicles", value: "EV + car" },
-          { icon: "💳", label: "Loans", value: "≈ NPR 75 lakh", highlight: false }
+          { icon: "💳", label: "Loans", value: "NPR 7.5 million" }
+        ]
+      }
+    ]
+  },
+  {
+    id: 11,
+    name: "Gauri Kumari Yadav",
+    shortName: "Gauri Yadav",
+    role: "Industry",
+    emoji: "🏭",
+    color: ["#0284c7", "#0369a1"],
+    status: "detailed",
+    pillTags: ["📈 NPR 3.38Cr", "🥇 180 Tolas Gold", "🏡 House/Land"],
+    numericAssets: { cash: 0, goldTola: 180, propertyValueApprox: 0, sharesVal: 33840000 },
+    assets: [
+      {
+        type: "section",
+        title: "Financial Assets",
+        items: [
+          { icon: "📈", label: "Shares", value: "NPR 3.38 crore", highlight: true },
+          { icon: "🥇", label: "Gold", value: "180 tola", highlight: true },
+          { icon: "🥈", label: "Silver", value: "2 kg" },
+        ]
+      },
+      {
+        type: "section",
+        title: "Properties & Income",
+        items: [
+          { icon: "🏡", label: "House/Land", value: "Declared" },
+          { icon: "💵", label: "Rental Income", value: "NPR 90k/month" },
+        ]
+      }
+    ]
+  },
+  {
+    id: 4,
+    name: "Shishir Khanal",
+    shortName: "Shishir Khanal",
+    role: "Foreign Affairs",
+    emoji: "🌐",
+    color: ["#0891b2", "#0e7490"],
+    status: "detailed",
+    pillTags: ["💵 NPR 1.3M", "🥇 22 Tolas Gold", "🏡 Land"],
+    numericAssets: { cash: 1300000, goldTola: 22, propertyValueApprox: 0, sharesVal: 0 },
+    assets: [
+      {
+        type: "section",
+        title: "Financial Assets",
+        items: [
+          { icon: "💵", label: "Bank/Cash", value: "NPR 1.3 million", highlight: true },
+          { icon: "🥇", label: "Gold", value: "22 tola", highlight: true },
+          { icon: "📈", label: "Shares", value: "Company shares" }
+        ]
+      },
+      {
+        type: "section",
+        title: "Properties",
+        items: [
+          { icon: "🏡", label: "House/Land", value: "Family house/land in Kathmandu, Tanahun, Nepalgunj" }
+        ]
+      }
+    ]
+  },
+  {
+    id: 6,
+    name: "Biraj Bhakta Shrestha",
+    shortName: "Biraj Shrestha",
+    role: "Energy",
+    emoji: "⚡",
+    color: ["#16a34a", "#15803d"],
+    status: "detailed",
+    pillTags: ["💵 NPR 6.4M", "🥇 15 Tolas Gold", "📈 NPR 1.45Cr"],
+    numericAssets: { cash: 6400000, goldTola: 15, propertyValueApprox: 0, sharesVal: 14500000 },
+    assets: [
+      {
+        type: "section",
+        title: "Financial Assets",
+        items: [
+          { icon: "💵", label: "Bank/Cash", value: "NPR 6.4 million", highlight: true },
+          { icon: "📈", label: "Shares", value: "NPR 1.45 crore", highlight: true },
+          { icon: "🥇", label: "Gold", value: "15 tola" },
+        ]
+      },
+      {
+        type: "section",
+        title: "Vehicles",
+        items: [
+          { icon: "🚗", label: "Vehicles", value: "Car, scooter, EV" }
+        ]
+      }
+    ]
+  },
+  {
+    id: 8,
+    name: "Sobita Gautam",
+    shortName: "Sobita Gautam",
+    role: "Law",
+    emoji: "⚖️",
+    color: ["#9333ea", "#7e22ce"],
+    status: "detailed",
+    pillTags: ["💵 NPR 1.05M", "🥇 15 Tolas Gold", "🏡 Houses"],
+    numericAssets: { cash: 1050000, goldTola: 15, propertyValueApprox: 0, sharesVal: 0 },
+    assets: [
+      {
+        type: "section",
+        title: "Financial & Jewels",
+        items: [
+          { icon: "💵", label: "Bank/Cash", value: "NPR 1.05 million", highlight: true },
+          { icon: "🥇", label: "Gold", value: "15 tola", highlight: true },
+          { icon: "🥈", label: "Silver & Diamond", value: "Silver 9 tola, diamond 1 tola" }
+        ]
+      },
+      {
+        type: "section",
+        title: "Properties & Liabilities",
+        items: [
+          { icon: "🏡", label: "Houses", value: "Kathmandu/Chitwan (family)" },
+          { icon: "💳", label: "Loans", value: "Loans for vehicles" }
+        ]
+      }
+    ]
+  },
+  {
+    id: 12,
+    name: "Sita Badi",
+    shortName: "Sita Badi",
+    role: "Women & Seniors",
+    emoji: "👩‍👧",
+    color: ["#e11d48", "#be123c"],
+    status: "detailed",
+    pillTags: ["💵 NPR 1.55M", "🥇 18 Tolas Gold", "🐔 Livestock"],
+    numericAssets: { cash: 1550000, goldTola: 18, propertyValueApprox: 0, sharesVal: 0 },
+    assets: [
+      {
+        type: "section",
+        title: "Financial Assets",
+        items: [
+          { icon: "💵", label: "Bank/Cash", value: "NPR 1.55 million (joint)", highlight: true },
+          { icon: "🥇", label: "Gold", value: "18 tola", highlight: true }
+        ]
+      },
+      {
+        type: "section",
+        title: "Properties & Others",
+        items: [
+          { icon: "🏡", label: "Land", value: "Land in Surkhet" },
+          { icon: "🛵", label: "Vehicles/Electronics", value: "Scooter, laptops" },
+          { icon: "🐔", label: "Livestock/Pets", value: "20 chickens, dog" }
+        ]
+      }
+    ]
+  },
+  {
+    id: 5,
+    name: "Sunil Lamsal",
+    shortName: "Sunil Lamsal",
+    role: "Infrastructure",
+    emoji: "🏗️",
+    color: ["#d97706", "#b45309"],
+    status: "detailed",
+    pillTags: ["💵 NPR 9M Cash", "🥇 30 Tolas Gold", "🏡 Houses/Land"],
+    numericAssets: { cash: 9000000, goldTola: 30, propertyValueApprox: 0, sharesVal: 0 },
+    assets: [
+      {
+        type: "section",
+        title: "Financial Assets",
+        items: [
+          { icon: "💵", label: "Bank/Cash", value: "NPR 9 million", highlight: true },
+          { icon: "🥇", label: "Gold", value: "30 tola", highlight: true },
+          { icon: "🥈", label: "Silver", value: "50 tola" }
+        ]
+      },
+      {
+        type: "section",
+        title: "Properties",
+        items: [
+          { icon: "🏡", label: "Land & Houses", value: "Rupandehi, Nawalparasi, Syangja" }
+        ]
+      }
+    ]
+  },
+  {
+    id: 13,
+    name: "Pratibha Rawal",
+    shortName: "Pratibha Rawal",
+    role: "Federal Affairs",
+    emoji: "📋",
+    color: ["#10b981", "#059669"],
+    status: "detailed",
+    pillTags: ["💵 NPR 2.4M", "🥇 25 Tolas Gold", "🏡 NPR 1.2Cr Land"],
+    numericAssets: { cash: 2400000, goldTola: 25, propertyValueApprox: 12000000, sharesVal: 0 },
+    assets: [
+      {
+        type: "section",
+        title: "Financial Assets",
+        items: [
+          { icon: "💵", label: "Bank/Cash", value: "NPR 2.4 million", highlight: true },
+          { icon: "🥇", label: "Gold", value: "25 tola", highlight: true }
+        ]
+      },
+      {
+        type: "section",
+        title: "Properties & Vehicles",
+        items: [
+          { icon: "🏡", label: "Land", value: "Budhanilkantha Rs 7M, Bara Rs 5M", highlight: true },
+          { icon: "🚗", label: "Vehicles", value: "Car Rs 4.4M" }
+        ]
+      },
+      {
+        type: "section",
+        title: "Liabilities",
+        items: [
+          { icon: "💳", label: "Loans", value: "NPR 2 million" }
+        ]
+      }
+    ]
+  },
+  {
+    id: 14,
+    name: "Gita Chaudhary",
+    shortName: "Gita Chaudhary",
+    role: "Agriculture",
+    emoji: "🌿",
+    color: ["#84cc16", "#65a30d"],
+    status: "detailed",
+    pillTags: ["💵 NPR 1.26L", "🥇 5 Tolas Gold", "🥈 100 Tolas Silver"],
+    numericAssets: { cash: 126000, goldTola: 5, propertyValueApprox: 0, sharesVal: 0 },
+    assets: [
+      {
+        type: "section",
+        title: "Financial & Jewels",
+        items: [
+          { icon: "💵", label: "Bank/Cash", value: "NPR 126,000", highlight: true },
+          { icon: "🥇", label: "Gold", value: "5 tola", highlight: true },
+          { icon: "🥈", label: "Silver", value: "100 tola" }
+        ]
+      },
+      {
+        type: "section",
+        title: "Other Assets",
+        items: [
+          { icon: "🛵", label: "Vehicles & Tech", value: "Scooters, watch, phone, laptop" },
+          { icon: "🐐", label: "Livestock", value: "2 goats, 10 chickens" }
         ]
       }
     ]
   }
 ];
 
-// Add pending ministers
+// Add remaining pending ministers
 [
-  { name: "Nisha Mehta", role: "Health & Population (also Water Supply)", emoji: "🏥" },
-  { name: "Dr. Bikram Timilsina", role: "Communications & Information Technology", emoji: "📡" },
-  { name: "Pratibha Rawal", role: "General Administration, Land Management, Poverty Alleviation", emoji: "📋" },
-  { name: "Ganesh Poudel", role: "Culture, Tourism & Civil Aviation", emoji: "✈️" },
-  { name: "Geeta Chaudhary", role: "Agriculture & Livestock + Forests & Environment", emoji: "🌿" },
-  { name: "Ramjee Yadav", role: "Labour, Employment & Social Security", emoji: "🤝" },
-  { name: "Gauri Kumari Yadav", role: "Industry, Commerce & Supplies", emoji: "🏭" },
-  { name: "Sita Badi", role: "Women, Children & Senior Citizens", emoji: "👩‍👧" }
+  { name: "Nisha Mehta", role: "Health & Population", emoji: "🏥" },
+  { name: "Dr. Bikram Timilsina", role: "Communications & Tech", emoji: "📡" },
+  { name: "Ganesh Poudel", role: "Culture & Tourism", emoji: "✈️" },
+  { name: "Ramjee Yadav", role: "Labour & Employment", emoji: "🤝" }
 ].forEach((m, idx) => {
   MINISTERS.push({
-    id: 10 + idx,
+    id: 20 + idx,
     name: m.name,
     shortName: m.name,
     role: m.role,
     emoji: m.emoji,
     color: ["#475569", "#334155"],
     status: "pending",
-    pillTags: ["📋 Disclosed Apr 12"],
+    pillTags: ["📋 Disclosed"],
     numericAssets: { cash: 0, goldTola: 0, propertyValueApprox: 0, sharesVal: 0 },
     assets: []
   });

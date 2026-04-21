@@ -47,24 +47,24 @@
   --clr-text: #0f172a;
   --clr-text-dim: #475569;
   --clr-text-muted: #64748b;
-  
+
   --shadow-card: 0 4px 16px rgba(0, 0, 0, 0.04);
   --shadow-card-h: 0 8px 30px rgba(0, 0, 0, 0.08);
 }
 
 [data-theme="makai"] {
-  --clr-bg: #1a1610; 
+  --clr-bg: #1a1610;
   --clr-surface: #272118;
   --clr-surface-2: #382f22;
   --clr-surface-3: #4a3e2d;
   --clr-border: rgba(245, 158, 11, 0.15);
   --clr-border-h: rgba(245, 158, 11, 0.3);
 
-  --clr-red: #d97706; 
+  --clr-red: #d97706;
   --clr-red-light: #f59e0b;
-  --clr-blue: #16a34a; 
+  --clr-blue: #16a34a;
   --clr-blue-light: #22c55e;
-  
+
   --clr-gold: #fbbf24;
   --clr-green: #4ade80;
   --clr-orange: #fb923c;
